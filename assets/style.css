@@ -29,6 +29,7 @@ body {
   }
   .cartao__conteudo p {
     padding: 4rem;
+    margin-top: 4rem;
   }
   .cartao__conteudo h3 {
     color: var(--text-color);
@@ -39,6 +40,8 @@ body {
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
+    backface-visibility: hidden;
+    
   }
   .cartao__conteudo__pergunta p {
     color: var(--text-color);
@@ -50,6 +53,15 @@ body {
   }
   .cartao:hover .cartao__conteudo{
     transform: rotateY(180deg);
+  }
+  .cartao__conteudo__pergunta, .cartao__conteudo__resposta{
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .cartao__conteudo__resposta{
+    transform: rotateY(180deg)
   }
   footer {
     background-color: black;
